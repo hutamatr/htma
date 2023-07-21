@@ -17,12 +17,14 @@ const sidebarList = [
 
 export default function Sidebar() {
   return (
-    <aside className='col-start-12 col-end-12 h-screen sticky top-0 z-[1080]'>
-      <div className='h-full flex flex-col items-center justify-center'>
+    <aside className='sticky top-0 z-[1080] col-start-12 col-end-12 h-screen'>
+      <div className='flex h-full flex-col items-center justify-center'>
         <ul className='relative flex flex-col gap-y-12'>
           {sidebarList.map((side) => (
             <li key={side.title} className='rotate-90'>
-              <Link href={side.link}>{side.title}</Link>
+              <Link href={side.link} className='text-sm md:text-base'>
+                {side.title}
+              </Link>
             </li>
           ))}
         </ul>
