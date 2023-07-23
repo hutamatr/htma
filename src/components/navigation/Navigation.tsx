@@ -10,15 +10,15 @@ export default function Navigation() {
   const menuShowHandler = () => setIsMenuShow((prevState) => !prevState);
 
   return (
-    <header className='nav-height fixed top-0 z-[1090] flex w-full flex-wrap items-center'>
-      <nav className='layout'>
+    <header className='nav-height fixed top-0 z-[1090] flex w-full items-center'>
+      <nav className='layout flex justify-center'>
         <div className={clsx('grid-12 gap-2', 'md:gap-6')}>
-          <div className='col-start-1'>
-            <h1 className='w-fit rounded-sm bg-custom-black px-2 py-1 text-xl font-semibold text-custom-green'>
-              HTMA.
+          <div className='col-start-1 flex w-fit items-center rounded-sm bg-custom-black px-2 py-1'>
+            <h1 className='whitespace-nowrap text-xl font-semibold text-custom-green'>
+              HTMA
             </h1>
           </div>
-          <div className='col-start-12 col-end-12 mx-auto block'>
+          <div className='col-start-12 mx-auto block'>
             <button onClick={menuShowHandler} className='z-[60] mt-1'>
               <MdGraphicEq
                 className={clsx(

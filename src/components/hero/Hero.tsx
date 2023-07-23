@@ -41,22 +41,33 @@ export default function Hero() {
     <section
       className={clsx(
         'sticky top-0 z-[1080] col-start-1 col-end-3 flex h-screen flex-col items-center',
-        'md:col-start-2 md:col-end-4'
+        'lg:col-start-2 lg:col-end-4'
       )}
     >
       <div
         className={clsx(
           'mb-20 mt-44 flex h-full flex-col-reverse justify-between',
-          'md:mb-0 md:mt-20 md:flex-col md:justify-center md:gap-y-8'
+          'md:mb-36 md:mt-52',
+          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-8'
         )}
       >
-        <div className={clsx('w-full -rotate-90', 'md:rotate-0')}>
+        <div className={clsx('w-full -rotate-90', 'lg:rotate-0')}>
           <div className='flex flex-row'>
-            <span className={clsx('text-xs text-custom-green', 'md:text-lg')}>
+            <span
+              className={clsx(
+                'text-xs text-custom-green',
+                'md:text-base',
+                'lg:text-lg'
+              )}
+            >
               /
             </span>
             <h1
-              className={clsx('nameBaffle text-xs font-normal', 'md:text-lg')}
+              className={clsx(
+                'nameBaffle text-xs font-normal',
+                'md:text-base',
+                'lg:text-lg'
+              )}
             >
               Hello, I'm
             </h1>
@@ -64,7 +75,8 @@ export default function Hero() {
           <h1
             className={clsx(
               'nameBaffle whitespace-nowrap text-lg font-bold',
-              'md:whitespace-normal md:text-5xl'
+              'md:text-4xl',
+              'lg:whitespace-normal lg:text-5xl'
             )}
           >
             Hutama Trirahmanto.
@@ -72,19 +84,20 @@ export default function Hero() {
           <p
             className={clsx(
               'w-fit whitespace-nowrap rounded-sm bg-custom-black px-1 text-base font-light text-custom-green',
-              'md:whitespace-normal md:bg-transparent md:text-xl md:font-thin md:text-custom-black'
+              'md:text-lg',
+              'lg:whitespace-normal lg:bg-transparent lg:text-xl lg:font-thin lg:text-custom-black'
             )}
           >
             I am a frontend developer
           </p>
         </div>
-        <section className={clsx('relative hidden', 'md:block')}>
-          <div className='relative w-fit rounded-sm border-2 border-b-8 border-custom-black'>
+        <section className={clsx('relative hidden', 'lg:block')}>
+          <div className='relative w-fit rotate-45 rounded-sm border-2 border-custom-black'>
             <Image
               src={patternOne.src}
               alt='pattern-1'
-              width={150}
-              height={150}
+              width={100}
+              height={100}
             />
             {/* <ImageArrow
               positionOne=''
@@ -119,25 +132,25 @@ export default function Hero() {
           </div>
           <div
             className={clsx(
-              'absolute left-24 top-20 -z-10 hidden h-fit max-w-fit rounded-sm border-2 border-t-8 border-custom-black',
-              'md:block'
+              'absolute left-20 top-4 -z-10 hidden h-fit max-w-fit rotate-45 rounded-sm border-2 border-custom-black',
+              'lg:block'
             )}
           >
-            <Image src={patternTwo} alt='pattern-2' width={100} height={100} />
+            <Image src={patternTwo} alt='pattern-2' width={75} height={75} />
           </div>
           <div
             className={clsx(
-              'absolute right-[4.5rem] top-12 -z-20 hidden h-fit max-w-fit rounded-sm border-2 border-r-8 border-custom-black',
-              'md:block'
+              'absolute left-36 top-8 -z-20 hidden h-fit max-w-fit rotate-45 rounded-sm border-2 border-custom-black',
+              'lg:block'
             )}
           >
-            <Image src={patternThree} alt='pattern-3' width={75} height={75} />
+            <Image src={patternThree} alt='pattern-3' width={50} height={50} />
           </div>
         </section>
         <ul
           className={clsx(
             'flex -rotate-90 justify-center',
-            'md:rotate-0 md:py-8'
+            'lg:rotate-0 lg:py-8'
           )}
         >
           {socials.map((item) => (
@@ -146,7 +159,8 @@ export default function Hero() {
                 href={item.href}
                 className={clsx(
                   'bg-transparent px-3 py-2 text-xs text-custom-black transition-all duration-300',
-                  'md:p-[clamp(0.875rem,_0.6544rem_+_0.2941vw,_1.125rem)_clamp(1.5rem,_1.0588rem_+_0.5882vw,_2rem)] md:pl-8 md:text-base',
+                  'md:text-lg',
+                  'lg:p-[clamp(0.875rem,_0.6544rem_+_0.2941vw,_1.125rem)_clamp(1.5rem,_1.0588rem_+_0.5882vw,_2rem)] lg:pl-8',
                   'hover:rounded-3xl hover:bg-custom-green'
                 )}
               >
