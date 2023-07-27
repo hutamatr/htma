@@ -1,15 +1,13 @@
 'use client';
 
 import clsx from 'clsx';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-import useBaffle from '@hooks/useBaffle';
+import { Chubbs1SVG, Chubbs2SVG } from '@components/ui/svg/ChubbsSVG';
+import LampSVG from '@components/ui/svg/LampSVG';
 
-import patternOne from '@public/assets/images/pattern-1.webp';
-import patternTwo from '@public/assets/images/pattern-2.webp';
-import patternThree from '@public/assets/images/pattern-3.webp';
+import useBaffle from '@hooks/useBaffle';
 
 const socials = [
   {
@@ -18,12 +16,12 @@ const socials = [
     href: '',
   },
   {
-    id: '01',
+    id: '02',
     title: 'Twitter',
     href: '',
   },
   {
-    id: '01',
+    id: '03',
     title: 'LinkedIn',
     href: '',
   },
@@ -33,7 +31,11 @@ export default function Hero() {
   const { newBaffle } = useBaffle('.nameBaffle');
 
   useEffect(() => {
-    newBaffle();
+    const timer = setTimeout(() => {
+      newBaffle();
+    }, 500);
+
+    return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -48,108 +50,67 @@ export default function Hero() {
         className={clsx(
           'mb-20 mt-44 flex h-full flex-col-reverse justify-between',
           'md:mb-36 md:mt-52',
-          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-8'
+          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-4'
         )}
       >
         <div className={clsx('w-full -rotate-90', 'lg:rotate-0')}>
-          <div className='flex flex-row'>
-            <span
-              className={clsx(
-                'text-xs text-custom-green',
-                'md:text-base',
-                'lg:text-lg'
-              )}
-            >
-              /
-            </span>
-            <h1
-              className={clsx(
-                'nameBaffle text-xs font-normal',
-                'md:text-base',
-                'lg:text-lg'
-              )}
-            >
-              Hello, I'm
-            </h1>
-          </div>
           <h1
             className={clsx(
-              'nameBaffle whitespace-nowrap text-lg font-bold',
-              'md:text-4xl',
-              'lg:whitespace-normal lg:text-5xl'
+              'text-xs font-normal text-custom-black',
+              'md:text-base',
+              'lg:text-lg',
+              'dark:text-custom-green'
             )}
           >
-            Hutama Trirahmanto.
+            hello, I'm
           </h1>
-          <p
+
+          <h1
             className={clsx(
-              'w-fit whitespace-nowrap rounded-sm bg-custom-black px-1 text-base font-light text-custom-green',
+              'nameBaffle relative z-[1200] whitespace-nowrap text-lg font-bold text-custom-black',
+              'md:text-4xl',
+              'lg:whitespace-normal lg:text-6xl',
+              'dark:text-custom-green'
+            )}
+          >
+            hutama trirahmanto
+          </h1>
+          <h3
+            className={clsx(
+              'w-fit whitespace-nowrap rounded bg-custom-black px-1 text-base font-light text-custom-green',
               'md:text-lg',
-              'lg:whitespace-normal lg:bg-transparent lg:text-xl lg:font-thin lg:text-custom-black'
+              'lg:whitespace-normal lg:bg-transparent lg:text-2xl lg:font-thin lg:text-custom-black',
+              'dark:text-custom-white-2'
             )}
           >
-            I am a frontend developer
-          </p>
+            --frontend developer
+          </h3>
         </div>
-        <section className={clsx('relative hidden', 'lg:block')}>
-          <div className='relative w-fit rotate-45 rounded-sm border-2 border-custom-black'>
-            <Image
-              src={patternOne.src}
-              alt='pattern-1'
-              width={100}
-              height={100}
-            />
-            {/* <ImageArrow
-              positionOne=''
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            />
-            <ImageArrow
-              positionOne='left-[1.5rem]'
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            />
-            <ImageArrow
-              positionOne='left-12'
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            />
-            <ImageArrow
-              positionOne='left-[4.5rem]'
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            />
-            <ImageArrow
-              positionOne='left-[6rem]'
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            />
-            <ImageArrow
-              positionOne='left-[7.5rem]'
-              positionTwo='top-0'
-              rotate='rotate-[-135deg] hover:rotate-[45deg]'
-            /> */}
-          </div>
-          <div
+        <section
+          className={clsx(
+            'relative hidden',
+            'lg:mb-4 lg:flex lg:w-full lg:items-center lg:justify-evenly'
+          )}
+        >
+          <Chubbs2SVG
+            className={clsx('w-20 text-custom-black', 'dark:text-custom-green')}
+            fill='currentColor'
+          />
+          <LampSVG
             className={clsx(
-              'absolute left-20 top-4 -z-10 hidden h-fit max-w-fit rotate-45 rounded-sm border-2 border-custom-black',
-              'lg:block'
+              'absolute -top-6 w-10 text-transparent',
+              'dark:text-custom-green'
             )}
-          >
-            <Image src={patternTwo} alt='pattern-2' width={75} height={75} />
-          </div>
-          <div
-            className={clsx(
-              'absolute left-36 top-8 -z-20 hidden h-fit max-w-fit rotate-45 rounded-sm border-2 border-custom-black',
-              'lg:block'
-            )}
-          >
-            <Image src={patternThree} alt='pattern-3' width={50} height={50} />
-          </div>
+            fill='currentColor'
+          />
+          <Chubbs1SVG
+            className={clsx('w-20 text-custom-black', 'dark:text-custom-green')}
+            fill='currentColor'
+          />
         </section>
         <ul
           className={clsx(
-            'flex -rotate-90 justify-center',
+            'flex -rotate-90 items-center justify-start',
             'lg:rotate-0 lg:py-8'
           )}
         >
@@ -158,10 +119,11 @@ export default function Hero() {
               <Link
                 href={item.href}
                 className={clsx(
-                  'bg-transparent px-3 py-2 text-xs text-custom-black transition-all duration-300',
+                  'rounded-3xl p-2 text-sm text-custom-black duration-300',
                   'md:text-lg',
-                  'lg:p-[clamp(0.875rem,_0.6544rem_+_0.2941vw,_1.125rem)_clamp(1.5rem,_1.0588rem_+_0.5882vw,_2rem)] lg:pl-8',
-                  'hover:rounded-3xl hover:bg-custom-green'
+                  'lg:p-[clamp(0.875rem,_0.6544rem_+_0.2941vw,_1.125rem)_clamp(1.5rem,_1.0588rem_+_0.5882vw,_2rem)]',
+                  'hover:bg-custom-green',
+                  'dark:text-custom-green dark:hover:text-custom-black'
                 )}
               >
                 {item.title}
