@@ -1,0 +1,110 @@
+import clsx from 'clsx';
+import { MdArrowForward } from 'react-icons/md';
+
+import NextImage from '@components/ui/NextImage';
+
+import { langSkillsImage, libFrameSkillsImage } from '../utils/skillsImage';
+
+export default function Skills() {
+  return (
+    <section
+      className={clsx(
+        'group flex cursor-default flex-col gap-y-6 border-b border-b-custom-black/50 py-6',
+        'dark:border-b-custom-white-2/50'
+      )}
+    >
+      <div
+        className={clsx(
+          'relative flex h-full w-fit items-center gap-x-1 bg-transparent pr-2 pt-1 duration-300',
+          'group-hover:rounded group-hover:bg-custom-black'
+        )}
+      >
+        <MdArrowForward
+          className={clsx(
+            'relative -top-1 text-3xl text-custom-green duration-500',
+            'group-hover:-rotate-45'
+          )}
+        />
+        <h1
+          className={clsx(
+            'text-3xl text-custom-black',
+            'group-hover:text-custom-green',
+            'lg:text-4xl',
+            'dark:text-custom-green'
+          )}
+        >
+          skills
+        </h1>
+      </div>
+      <div className='flex flex-col gap-y-4'>
+        <h2
+          className={clsx(
+            'text-base text-custom-black',
+            '2xl:text-lg',
+            'dark:text-custom-white-2'
+          )}
+        >
+          Main
+        </h2>
+        <ul
+          className={clsx(
+            'grid grid-cols-4 items-center justify-items-center',
+            'md:grid-cols-8'
+          )}
+        >
+          {langSkillsImage.map(({ id, image, title }, index) => (
+            <li key={id} className='flex aspect-square w-fit items-center'>
+              <NextImage
+                src={image}
+                alt={title}
+                width={75}
+                height={75}
+                className={clsx(
+                  index === 0 ? 'bg-custom-white-2 p-1' : '',
+                  index === 1 ? 'bg-custom-white-2 p-1' : '',
+                  'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
+                  'md:w-12'
+                )}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className='flex flex-col gap-y-4'>
+        <h2
+          className={clsx(
+            'text-base text-custom-black',
+            '2xl:text-lg',
+            'dark:text-custom-white-2'
+          )}
+        >
+          Library & Framework
+        </h2>
+        <ul
+          className={clsx(
+            'grid grid-cols-4 items-center justify-items-center',
+            'md:grid-cols-8'
+          )}
+        >
+          {libFrameSkillsImage.map(({ id, image, title }, index) => (
+            <li key={id} className='flex aspect-square w-fit items-center'>
+              <NextImage
+                src={image}
+                alt={title}
+                width={75}
+                height={75}
+                className={clsx(
+                  index === 2 ? 'bg-custom-white-2 p-1' : '',
+                  index === 3 ? 'bg-custom-white-2 p-1' : '',
+                  'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
+                  'md:w-12',
+                  'lg:w-14'
+                )}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
