@@ -4,7 +4,8 @@ const useBaffle = (classNameSelector: string) => {
   const newBaffle = () => {
     const target = baffle(classNameSelector);
     target.set({
-      characters: '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█<░▒ ▓/░>',
+      // characters: '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█<░▒ ▓/░>',
+      characters: 'abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}|;:<>',
       speed: 100,
     });
     target.start();

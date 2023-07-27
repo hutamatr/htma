@@ -11,6 +11,12 @@ interface ILayoutProps {
 export default function Layout({ children }: ILayoutProps) {
   return (
     <>
+      <div
+        className={clsx(
+          'mask-top visible fixed top-0 z-[1030] h-[8%] w-full bg-custom-white-2',
+          'dark:bg-custom-black'
+        )}
+      ></div>
       <Navigation />
       <main>
         <section className='layout flex justify-center'>
@@ -21,6 +27,12 @@ export default function Layout({ children }: ILayoutProps) {
           </div>
         </section>
       </main>
+      <div
+        className={clsx(
+          'mask-bottom visible fixed bottom-0 z-[1050] h-[8%] w-full bg-custom-white-2',
+          'dark:bg-custom-black'
+        )}
+      ></div>
     </>
   );
 }
