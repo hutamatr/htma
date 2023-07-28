@@ -1,9 +1,19 @@
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { MdDoubleArrow } from 'react-icons/md';
+import { shallow } from 'zustand/shallow';
+
+import { useStore } from '@store/useStore';
 
 const ScrollTop = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const { isClient, clientHandler } = useStore(
+    (state) => ({
+      isClient: state.isClient,
+      clientHandler: state.clientHandler,
+    }),
+    shallow
+  );
 
   const handleScroll = () => {
     const position = window.scrollY;
@@ -11,22 +21,25 @@ const ScrollTop = () => {
   };
 
   useEffect(() => {
+    clientHandler();
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [clientHandler]);
 
   const scrollTopHandler = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    isClient && window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <button
       className={clsx(
         `${
-          scrollPosition > window.innerHeight / 4 ? '' : 'translate-y-[999px]'
+          isClient && scrollPosition > window.innerHeight / 4
+            ? ''
+            : 'translate-y-[999px]'
         }`,
         'fixed bottom-[5%] rounded bg-custom-black p-2 duration-700',
         'lg:bg-custom-green',
