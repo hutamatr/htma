@@ -26,8 +26,8 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
-      // "@store/*": ["src/store/*"],
+      "@utils/*": ["src/utils/*"],
+      "@store/*": ["src/store/*"]
       // "@navigation/*": ["src/navigation/*"],
       // "types/*": ["src/types/*"]
     }

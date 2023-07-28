@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import Layout from '@components/layout/Layout';
+import { ThemeProvider } from '@components/provider/theme-provider';
 
 import '@styles/globals.css';
 
@@ -42,7 +43,7 @@ interface IRootLayoutProps {
 
 export default function RootLayout({ children }: IRootLayoutProps) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
         className={clsx(
           kataGrotesk.className,
@@ -50,7 +51,9 @@ export default function RootLayout({ children }: IRootLayoutProps) {
           'dark:bg-custom-black'
         )}
       >
-        <Layout>{children}</Layout>
+        <ThemeProvider attribute='class' storageKey='htma-theme'>
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );
