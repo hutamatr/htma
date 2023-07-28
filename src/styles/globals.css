@@ -60,6 +60,34 @@
     @apply w-full bg-transparent;
     transition: 0s;
   }
+
+  /* Loading UI */
+
+  .loader,
+  .loader::before,
+  .loader::after {
+    @apply animate-spin rounded-xl border-2 border-solid;
+  }
+
+  .loader {
+    @apply relative flex h-10 w-10 items-center justify-center border-custom-black;
+  }
+
+  .loader::before,
+  .loader::after {
+    @apply absolute;
+    content: '';
+  }
+
+  .loader::before {
+    @apply h-[110%] w-[110%] border-custom-green;
+    animation-delay: 0.5s;
+  }
+
+  .loader::after {
+    @apply h-[120%] w-[120%] border-custom-black;
+    animation-delay: 0.1s;
+  }
 }
 
 ::-webkit-scrollbar {
