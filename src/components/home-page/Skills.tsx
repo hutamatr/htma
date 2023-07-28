@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 import { MdArrowForward } from 'react-icons/md';
 
 import NextImage from '@components/ui/NextImage';
@@ -48,24 +49,26 @@ export default function Skills() {
         </h2>
         <ul
           className={clsx(
-            'grid grid-cols-4 items-center justify-items-center',
+            'grid grid-cols-4 items-center justify-items-center gap-4',
             'md:grid-cols-8'
           )}
         >
-          {langSkillsImage.map(({ id, image, title }, index) => (
+          {langSkillsImage.map(({ id, image, title, link }, index) => (
             <li key={id} className='flex aspect-square w-fit items-center'>
-              <NextImage
-                src={image}
-                alt={title}
-                width={75}
-                height={75}
-                className={clsx(
-                  index === 0 ? 'bg-custom-white-2 p-1' : '',
-                  index === 1 ? 'bg-custom-white-2 p-1' : '',
-                  'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
-                  'md:w-12'
-                )}
-              />
+              <Link href={link} target='_blank' rel='noreferrer'>
+                <NextImage
+                  src={image}
+                  alt={title}
+                  width={75}
+                  height={75}
+                  className={clsx(
+                    index === 0 ? 'bg-custom-white-2 p-1' : '',
+                    index === 1 ? 'bg-custom-white-2 p-1' : '',
+                    'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
+                    'md:w-12'
+                  )}
+                />
+              </Link>
             </li>
           ))}
         </ul>
@@ -82,25 +85,32 @@ export default function Skills() {
         </h2>
         <ul
           className={clsx(
-            'grid grid-cols-4 items-center justify-items-center',
+            'grid grid-cols-4 items-center justify-items-center gap-4',
             'md:grid-cols-8'
           )}
         >
-          {libFrameSkillsImage.map(({ id, image, title }, index) => (
+          {libFrameSkillsImage.map(({ id, image, title, link }, index) => (
             <li key={id} className='flex aspect-square w-fit items-center'>
-              <NextImage
-                src={image}
-                alt={title}
-                width={75}
-                height={75}
-                className={clsx(
-                  index === 2 ? 'bg-custom-white-2 p-1' : '',
-                  index === 3 ? 'bg-custom-white-2 p-1' : '',
-                  'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
-                  'md:w-12',
-                  'lg:w-14'
-                )}
-              />
+              <Link href={link} target='_blank' rel='noreferrer'>
+                <NextImage
+                  src={image}
+                  alt={title}
+                  width={75}
+                  height={75}
+                  className={clsx(
+                    index === 2 ||
+                      index === 3 ||
+                      index === 5 ||
+                      index === 6 ||
+                      index === 7
+                      ? clsx('bg-custom-white-2', 'dark:p-[2px]')
+                      : '',
+                    'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
+                    'md:w-12',
+                    'lg:w-14'
+                  )}
+                />
+              </Link>
             </li>
           ))}
         </ul>
