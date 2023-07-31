@@ -3,7 +3,8 @@ import { MdArrowForward } from 'react-icons/md';
 
 import Card from '@components/ui/Card';
 import NextImage from '@components/ui/NextImage';
-import { portfolioData } from '@components/utils/dummy';
+
+import { portfolioData } from '@utils/dummy';
 
 export default function Portfolio() {
   return (

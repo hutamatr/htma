@@ -13,18 +13,18 @@ const socials = [
   {
     id: '01',
     title: 'Github',
-    href: '',
+    href: 'https://github.com/hutamatr',
   },
   {
     id: '02',
     title: 'Twitter',
-    href: '',
+    href: 'https://twitter.com/huutamatr',
   },
-  {
-    id: '03',
-    title: 'LinkedIn',
-    href: '',
-  },
+  // {
+  //   id: '03',
+  //   title: 'Telegram',
+  //   href: '',
+  // },
 ];
 
 export default function Hero() {
@@ -110,7 +110,7 @@ export default function Hero() {
         </section>
         <ul
           className={clsx(
-            'flex -rotate-90 items-center justify-start',
+            'flex w-full -rotate-90 items-center justify-evenly',
             'lg:rotate-0 lg:py-8'
           )}
         >
@@ -118,6 +118,8 @@ export default function Hero() {
             <li key={item.id}>
               <Link
                 href={item.href}
+                target='_blank'
+                rel='noopener noreferrer'
                 className={clsx(
                   'rounded-3xl p-2 text-sm text-custom-black duration-300',
                   'md:text-lg',

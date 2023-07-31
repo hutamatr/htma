@@ -1,9 +1,15 @@
 import clsx from 'clsx';
+import { Metadata } from 'next';
 
 import Footer from '@components/footer/Footer';
 import About from '@components/home-page/About';
 import Portfolio from '@components/home-page/Portfolio';
 import Skills from '@components/home-page/Skills';
+
+export const metadata: Metadata = {
+  title: 'htma',
+  description: 'hutamatr portfolio website',
+};
 
 export default function HomePage() {
   return (
