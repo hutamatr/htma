@@ -4,7 +4,7 @@ import { MdArrowForward } from 'react-icons/md';
 
 import NextImage from '@components/ui/NextImage';
 
-import { langSkillsImage, libFrameSkillsImage } from '../utils/skillsImage';
+import { langSkillsImage, libFrameSkillsImage } from '@utils/skillsImage';
 
 export default function Skills() {
   return (
@@ -61,11 +61,13 @@ export default function Skills() {
                   alt={title}
                   width={75}
                   height={75}
+                  imgClassName='object-contain aspect-[3/3]'
                   className={clsx(
                     index === 0 ? 'bg-custom-white-2 p-1' : '',
                     index === 1 ? 'bg-custom-white-2 p-1' : '',
-                    'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
-                    'md:w-12'
+                    'flex w-10 items-center justify-center rounded-sm',
+                    'md:w-14',
+                    '2xl:w-16'
                   )}
                 />
               </Link>
@@ -97,6 +99,7 @@ export default function Skills() {
                   alt={title}
                   width={75}
                   height={75}
+                  imgClassName='object-contain aspect-[3/3]'
                   className={clsx(
                     index === 2 ||
                       index === 3 ||
@@ -105,9 +108,9 @@ export default function Skills() {
                       index === 7
                       ? clsx('bg-custom-white-2', 'dark:p-[2px]')
                       : '',
-                    'flex aspect-[3/3] w-10 items-center justify-center rounded-sm',
-                    'md:w-12',
-                    'lg:w-14'
+                    'flex w-10 items-center justify-center rounded-sm',
+                    'md:w-14',
+                    '2xl:w-16'
                   )}
                 />
               </Link>
