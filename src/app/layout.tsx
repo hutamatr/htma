@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import Layout from '@components/layout/Layout';
@@ -31,11 +30,6 @@ const kataGrotesk = localFont({
     },
   ],
 });
-
-export const metadata: Metadata = {
-  title: '// htma',
-  description: 'hutama trirahmanto portfolio website',
-};
 
 interface IRootLayoutProps {
   children: React.ReactNode;
