@@ -46,6 +46,7 @@
   .menu-link:before {
     @apply left-0;
   }
+
   .menu-link:after {
     @apply right-0 bg-custom-green dark:md:bg-custom-black;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -66,11 +67,11 @@
   .loader,
   .loader::before,
   .loader::after {
-    @apply animate-spin rounded-xl border-2 border-solid;
+    @apply animate-[spin_2s_linear_infinite] rounded-xl border-2;
   }
 
   .loader {
-    @apply relative flex h-10 w-10 items-center justify-center border-custom-black;
+    @apply relative flex items-center justify-center border-custom-black dark:border-custom-white-2;
   }
 
   .loader::before,
@@ -80,13 +81,52 @@
   }
 
   .loader::before {
-    @apply h-[110%] w-[110%] border-custom-green;
+    @apply h-[110%] w-[110%] border-custom-green dark:border-custom-black;
     animation-delay: 0.5s;
   }
 
   .loader::after {
-    @apply h-[120%] w-[120%] border-custom-black;
+    @apply h-[120%] w-[120%] border-custom-black dark:border-custom-green;
     animation-delay: 0.1s;
+  }
+
+  /* Cursor */
+
+  .cursor {
+    @apply pointer-events-none absolute h-6 w-6 rounded-full bg-transparent;
+  }
+
+  .cursor::after {
+    @apply absolute -left-3 -top-3 h-6 w-6 rounded-full border-[1.5px] border-custom-black dark:border-custom-green;
+    content: '';
+  }
+  .expand {
+    animation: cursorAnim 0.5s forwards;
+  }
+
+  @keyframes cursorAnim {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Scroll-bar */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
