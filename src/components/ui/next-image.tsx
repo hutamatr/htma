@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 type NextImageProps = {
   useSkeleton?: boolean;
