@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import localFont from 'next/font/local';
 
-import Layout from '@components/layout/Layout';
+import Layout from '@components/layout/layout';
 import { ThemeProvider } from '@components/provider/theme-provider';
 
 import '@styles/globals.css';
