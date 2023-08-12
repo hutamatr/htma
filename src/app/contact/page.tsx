@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 
-import Footer from '@components/footer/footer';
+import Footer from '@components/footer/footer-section';
 
 import Contact from '@modules/contact-page/contact';
 

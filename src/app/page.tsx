@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { Metadata } from 'next';
 
-import Footer from '@components/footer/footer';
+import Footer from '@components/footer/footer-section';
 
 import About from '@modules/home-page/about';
 import Portfolio from '@modules/home-page/portfolio';

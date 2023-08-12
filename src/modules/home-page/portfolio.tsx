@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { MdArrowForward } from 'react-icons/md';
 
-import Card from '@components/ui/card';
+import Card from '@components/ui/card-base';
 import NextImage from '@components/ui/next-image';
 
 import { portfolioData } from '@utils/portfolio-data';
