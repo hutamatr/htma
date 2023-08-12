@@ -52,8 +52,8 @@ module.exports = {
           // components
           ['^@components'],
 
-          // screens
-          // ['^@screens', '^@navigation'],
+          // modules
+          ['^@modules'],
 
           // store
           ['^@store', '^@api'],
@@ -62,7 +62,6 @@ module.exports = {
           ['^@hooks', '^@utils'],
 
           // Other imports
-          // ['^@/'],
           ['^@public'],
 
           // {s}css files

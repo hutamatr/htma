@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { MdArrowForward } from 'react-icons/md';
 
-import NextImage from '@components/ui/NextImage';
+import NextImage from '@components/ui/next-image';
 
-import { langSkillsImage, libFrameSkillsImage } from '@utils/skillsImage';
+import { langSkillsImage, libFrameSkillsImage } from '@utils/skills-image';
 
 export default function Skills() {
   return (

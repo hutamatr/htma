@@ -27,7 +27,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
-      "@store/*": ["src/store/*"]
+      "@store/*": ["src/store/*"],
+      "@modules/*": ["src/modules/*"]
       // "@navigation/*": ["src/navigation/*"],
       // "types/*": ["src/types/*"]
     }

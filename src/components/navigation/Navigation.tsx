@@ -1,15 +1,17 @@
 'use client';
 
 import clsx from 'clsx';
+import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect } from 'react';
 import { MdGraphicEq } from 'react-icons/md';
 import { shallow } from 'zustand/shallow';
 
+import LoadingSpin from '@components/ui/loading-spin';
+
 import { useStore } from '@store/useStore';
 
 export default function Navigation() {
-  // const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const { isClient, clientHandler } = useStore(
     (state) => ({
@@ -46,7 +48,7 @@ export default function Navigation() {
                   'dark:text-custom-green dark:lg:text-custom-black'
                 )}
               >
-                <MdGraphicEq className='animate-spin text-3xl duration-500' />
+                <LoadingSpin className='h-8 w-8' />
               </div>
             </div>
           </div>
@@ -60,9 +62,12 @@ export default function Navigation() {
       <nav className='layout flex justify-center'>
         <div className={clsx('grid-12 gap-2', 'md:gap-6')}>
           <div className='col-start-1 flex w-fit items-center rounded bg-custom-black px-2 py-1'>
-            <h1 className='whitespace-nowrap text-xl font-semibold text-custom-green'>
+            <Link
+              href='/'
+              className='whitespace-nowrap text-xl font-semibold text-custom-green'
+            >
               HTMA
-            </h1>
+            </Link>
           </div>
           <div className='col-start-12 mx-auto block'>
             <button

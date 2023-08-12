@@ -20,11 +20,6 @@ const socials = [
     title: 'Twitter',
     href: 'https://twitter.com/huutamatr',
   },
-  // {
-  //   id: '03',
-  //   title: 'Telegram',
-  //   href: '',
-  // },
 ];
 
 export default function Hero() {

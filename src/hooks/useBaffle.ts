@@ -1,6 +1,6 @@
 import baffle from 'baffle';
 
-const useBaffle = (classNameSelector: string) => {
+export default function useBaffle(classNameSelector: string) {
   const newBaffle = () => {
     const target = baffle(classNameSelector);
     target.set({
@@ -14,6 +14,4 @@ const useBaffle = (classNameSelector: string) => {
   };
 
   return { newBaffle };
-};
-
-export default useBaffle;
+}

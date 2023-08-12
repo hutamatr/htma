@@ -2,8 +2,9 @@ import clsx from 'clsx';
 import { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
 
-import Contact from '@components/contact-page/Contact';
-import Footer from '@components/footer/Footer';
+import Footer from '@components/footer/footer';
+
+import Contact from '@modules/contact-page/contact';
 
 export const metadata: Metadata = {
   title: 'contact',
