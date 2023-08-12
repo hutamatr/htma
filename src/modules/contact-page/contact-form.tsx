@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
-import InputForm from '@components/ui/InputForm';
+import InputForm from '@components/ui/input-form';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { MdArrowForward } from 'react-icons/md';
 
-import ContactForm from './ContactForm';
+import ContactForm from './contact-form';
 
 export default function Contact() {
   return (
