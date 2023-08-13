@@ -22,7 +22,7 @@ export const portfolioData = [
     id: '03',
     title: 'Urban Fashion Shop',
     image: urban,
-    url: 'https://urban-fashion-shop.vercel.app/',
+    url: 'https://urban-fashion.htma.site/',
   },
   {
     id: '04',
