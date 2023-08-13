@@ -5,7 +5,7 @@ export default function useBaffle(classNameSelector: string) {
     const target = baffle(classNameSelector);
     target.set({
       // characters: '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█<░▒ ▓/░>',
-      characters: 'abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}|;:<>',
+      characters: 'xxxxxxxxxxxx',
       speed: 100,
     });
     target.start();
