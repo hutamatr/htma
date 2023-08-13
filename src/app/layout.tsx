@@ -45,7 +45,11 @@ export default function RootLayout({ children }: IRootLayoutProps) {
           'dark:bg-custom-black'
         )}
       >
-        <ThemeProvider attribute='class' storageKey='htma-theme'>
+        <ThemeProvider
+          attribute='class'
+          storageKey='htma-theme'
+          defaultTheme='light'
+        >
           <Layout>{children}</Layout>
         </ThemeProvider>
       </body>
