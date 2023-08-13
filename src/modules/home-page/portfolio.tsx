@@ -38,7 +38,7 @@ export default function Portfolio() {
           portfolio
         </h1>
       </div>
-      <ul className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+      <ul className='mx-2 grid grid-cols-1 gap-4 md:grid-cols-2'>
         {portfolioData.map(({ id, image, title, url }) => {
           return (
             <li key={id}>
