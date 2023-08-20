@@ -5,7 +5,7 @@ import taskify from '@public/assets/images/portfolio/taskify-mockup.webp';
 import urban from '@public/assets/images/portfolio/urban-shop-mockup.webp';
 import shortfly from '@public/assets/images/portfolio/url-shortly-mockup.webp';
 
-export const portfolioData = [
+export const portfolioData: IPortfolio[] = [
   {
     id: '01',
     title: 'Garuda Universe',

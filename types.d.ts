@@ -6,3 +6,10 @@ interface Inputs {
   subject: string;
   message: string;
 }
+
+interface IPortfolio {
+  id: string;
+  title: string;
+  image: StaticImageData;
+  url: string;
+}
