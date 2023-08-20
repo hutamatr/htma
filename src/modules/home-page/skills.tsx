@@ -34,7 +34,7 @@ export default function Skills() {
             'dark:text-custom-green'
           )}
         >
-          skills
+          tech toolbox
         </h1>
       </div>
       <div className='flex flex-col gap-y-4'>

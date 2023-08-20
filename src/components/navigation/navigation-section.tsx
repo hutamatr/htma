@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect } from 'react';
 import { MdGraphicEq } from 'react-icons/md';
-import { shallow } from 'zustand/shallow';
 
 import LoadingSpin from '@components/ui/loading-spin';
 
@@ -13,13 +12,10 @@ import { useStore } from '@store/useStore';
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme();
-  const { isClient, clientHandler } = useStore(
-    (state) => ({
-      isClient: state.isClient,
-      clientHandler: state.clientHandler,
-    }),
-    shallow
-  );
+  const { isClient, clientHandler } = useStore((state) => ({
+    isClient: state.isClient,
+    clientHandler: state.clientHandler,
+  }));
 
   useEffect(() => {
     clientHandler();

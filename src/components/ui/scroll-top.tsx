@@ -1,19 +1,12 @@
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { MdDoubleArrow } from 'react-icons/md';
-import { shallow } from 'zustand/shallow';
 
 import { useStore } from '@store/useStore';
 
 const ScrollTop = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const { isClient, clientHandler } = useStore(
-    (state) => ({
-      isClient: state.isClient,
-      clientHandler: state.clientHandler,
-    }),
-    shallow
-  );
+  const { isClient, clientHandler } = useStore((state) => state);
 
   const handleScroll = () => {
     const position = window.scrollY;

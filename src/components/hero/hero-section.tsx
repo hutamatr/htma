@@ -32,7 +32,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       newBaffle();
-    }, 2000);
+    }, 2700);
 
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,7 +61,14 @@ export default function Hero() {
               'dark:text-custom-green'
             )}
             initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 0.3,
+                duration: 0.6,
+              },
+            }}
             exit={{ opacity: 0, x: -24 }}
           >
             hello, I'm
@@ -81,7 +88,11 @@ export default function Hero() {
                 'dark:text-custom-green'
               )}
               initial={{ opacity: 0, x: -24 }}
-              animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.5, duration: 0.7 },
+              }}
               exit={{ opacity: 0, x: -24 }}
             >
               hutama
@@ -94,7 +105,11 @@ export default function Hero() {
                 'dark:text-custom-green'
               )}
               initial={{ opacity: 0, x: -24 }}
-              animate={{ opacity: 1, x: 0, transition: { delay: 0.7 } }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.7, duration: 0.7 },
+              }}
               exit={{ opacity: 0, x: -24 }}
             >
               trirahmanto
@@ -108,7 +123,11 @@ export default function Hero() {
               'dark:text-custom-white-2'
             )}
             initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 0.9 } }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.9, duration: 0.7 },
+            }}
             exit={{ opacity: 0, x: -24 }}
           >
             --frontend developer
@@ -122,7 +141,11 @@ export default function Hero() {
         >
           <motion.div
             initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 1.2 } }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 1.2, duration: 0.7 },
+            }}
             exit={{ opacity: 0, x: -24 }}
           >
             <Chubbs2SVG
@@ -135,7 +158,11 @@ export default function Hero() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 2 } }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 2, duration: 0.7 },
+            }}
             exit={{ opacity: 0, x: 24 }}
           >
             <Chubbs1SVG
