@@ -45,6 +45,9 @@ export default function RootLayout({ children }: IRootLayoutProps) {
           'dark:bg-custom-black'
         )}
       >
+        <div id='modal-card'></div>
+        <div id='modal-backdrop'></div>
+        <div id='modal-close'></div>
         <ThemeProvider
           attribute='class'
           storageKey='htma-theme'

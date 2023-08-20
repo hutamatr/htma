@@ -1,15 +1,22 @@
+'use client';
+
 import clsx from 'clsx';
 
 import Hero from '@components/hero/hero-section';
 import Navigation from '@components/navigation/navigation-section';
 import Sidebar from '@components/sidebar/sidebar-section';
 import CustomCursor from '@components/ui/custom-cursor';
+import Modal from '@components/ui/modal';
+
+import { useStore } from '@store/useStore';
 
 interface ILayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: ILayoutProps) {
+  const { portfolioData } = useStore((state) => state);
+
   return (
     <>
       <div
@@ -26,6 +33,7 @@ export default function Layout({ children }: ILayoutProps) {
             <Hero />
             {children}
             <Sidebar />
+            <Modal {...(portfolioData as IPortfolio)} />
           </div>
         </section>
       </main>
