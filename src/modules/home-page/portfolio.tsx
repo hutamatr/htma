@@ -5,9 +5,11 @@ import { MdArrowForward } from 'react-icons/md';
 
 import Card from '@components/ui/card-base';
 import NextImage from '@components/ui/next-image';
+import ArrowSVG from '@components/ui/svg/ArrowSVG';
 
 import { useStore } from '@store/useStore';
 
+import { neutral } from '@utils/localFont';
 import { portfolioData } from '@utils/portfolio-data';
 
 export default function Portfolio() {
@@ -40,9 +42,10 @@ export default function Portfolio() {
           />
           <h1
             className={clsx(
-              'text-3xl text-custom-black',
+              neutral.className,
+              'text-xl text-custom-black',
               'group-hover/portfolio:text-custom-green',
-              'lg:text-4xl',
+              'lg:text-2xl',
               'dark:text-custom-green'
             )}
           >
@@ -50,10 +53,10 @@ export default function Portfolio() {
           </h1>
         </div>
         <ul className='mx-4 grid grid-cols-1 gap-[0.65rem] md:grid-cols-12 md:grid-rows-[7]'>
-          {portfolioData.map(({ id, image, title, url }, index) => {
+          {portfolioData.map((portfolio, index) => {
             return (
               <li
-                key={id}
+                key={portfolio.id}
                 className={clsx(
                   index === 0 &&
                     'md:col-start-1 md:col-end-9 md:row-start-1 md:row-end-5',
@@ -69,25 +72,18 @@ export default function Portfolio() {
                     'md:col-start-1 md:col-end-5 md:row-start-6 md:row-end-7'
                 )}
               >
-                <button
-                  onClick={portfolioHandler.bind(null, {
-                    id,
-                    image,
-                    title,
-                    url,
-                  })}
-                >
+                <button onClick={portfolioHandler.bind(null, portfolio)}>
                   <Card
                     className={clsx(
-                      'group/card relative w-full cursor-pointer overflow-hidden shadow-custom-shadow duration-500',
+                      'group/card relative overflow-hidden shadow-custom-shadow duration-500',
                       'hover:-translate-x-[0.2rem] hover:-translate-y-[0.2rem] hover:border hover:border-custom-black hover:shadow-[0.25rem_0.25rem_#24282C]',
                       'dark:hover:border-custom-black dark:hover:shadow-[0.25rem_0.25rem_#EAE9E2] dark:active:shadow-none',
                       'active:translate-x-0 active:translate-y-0 active:shadow-none'
                     )}
                   >
                     <NextImage
-                      src={image}
-                      alt={title}
+                      src={portfolio.image}
+                      alt={portfolio.title}
                       width={600}
                       height={600}
                       className={clsx(
@@ -95,20 +91,21 @@ export default function Portfolio() {
                         'group-hover/card:scale-105'
                       )}
                     />
-                    <div
-                      className={clsx(
-                        'absolute bottom-0 w-full bg-custom-black/70 px-2 py-1 duration-500',
-                        'group-hover/card:h-12 group-hover/card:bg-custom-green/50'
-                      )}
-                    >
-                      <h2
+                    <div className='absolute bottom-0 w-full bg-transparent p-[0.25rem]'>
+                      <div
                         className={clsx(
-                          'flex h-full text-base text-custom-green duration-500',
-                          'group-hover/card:items-center group-hover/card:text-lg group-hover/card:text-custom-black'
+                          'flex h-full items-start justify-between rounded bg-custom-white p-2',
+                          'dark:bg-custom-green'
                         )}
                       >
-                        {title}
-                      </h2>
+                        <h2 className='text-start text-sm font-semibold text-custom-black'>
+                          {portfolio.title}
+                        </h2>
+                        <ArrowSVG
+                          className='relative w-5 divide-gray-500 rounded-full bg-custom-black text-custom-green duration-500'
+                          fill='currentColor'
+                        />
+                      </div>
                     </div>
                   </Card>
                 </button>
