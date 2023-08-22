@@ -25,7 +25,7 @@ export default function ModalCard({
       className={clsx(
         outerClassName,
         isModalShow ? '' : 'translate-y-[999px]',
-        'fixed bottom-0 left-0 z-[1300] h-[90vh] w-full overflow-scroll rounded-t-3xl bg-custom-white-2 p-6 text-center font-semibold uppercase shadow-custom-shadow duration-700',
+        'fixed bottom-0 left-0 z-[1300] h-[80vh] w-full overflow-scroll rounded-t-3xl bg-custom-white-2 p-6 text-center font-semibold uppercase shadow-custom-shadow duration-700',
         'dark:bg-custom-black',
         'md:h-fit'
       )}
@@ -62,7 +62,7 @@ export default function ModalCard({
                   target='_blank'
                   rel='noreferrer'
                   className={clsx(
-                    'flex items-center gap-x-1 text-sm lowercase text-custom-black',
+                    'flex items-center gap-x-1 text-base lowercase text-custom-black',
                     'md:text-2xl'
                   )}
                 >

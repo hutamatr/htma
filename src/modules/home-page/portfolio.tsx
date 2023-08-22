@@ -75,10 +75,9 @@ export default function Portfolio() {
                 <button onClick={portfolioHandler.bind(null, portfolio)}>
                   <Card
                     className={clsx(
-                      'group/card relative overflow-hidden shadow-custom-shadow duration-500',
-                      'hover:-translate-x-[0.2rem] hover:-translate-y-[0.2rem] hover:border hover:border-custom-black hover:shadow-[0.25rem_0.25rem_#24282C]',
-                      'dark:hover:border-custom-black dark:hover:shadow-[0.25rem_0.25rem_#EAE9E2] dark:active:shadow-none',
-                      'active:translate-x-0 active:translate-y-0 active:shadow-none'
+                      'group/card relative -translate-x-[0.2rem] -translate-y-[0.2rem] overflow-hidden border border-custom-black shadow-[0.25rem_0.25rem_#24282C] duration-300',
+                      'active:translate-x-0 active:translate-y-0 active:shadow-none',
+                      'dark:shadow-[0.25rem_0.25rem_#EAE9E2] dark:active:translate-x-0 dark:active:translate-y-0 dark:active:shadow-none'
                     )}
                   >
                     <NextImage
@@ -86,10 +85,7 @@ export default function Portfolio() {
                       alt={portfolio.title}
                       width={600}
                       height={600}
-                      className={clsx(
-                        'w-full duration-500',
-                        'group-hover/card:scale-105'
-                      )}
+                      className='w-full'
                     />
                     <div className='absolute bottom-0 w-full bg-transparent p-[0.25rem]'>
                       <div

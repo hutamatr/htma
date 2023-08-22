@@ -18,9 +18,6 @@ export default function CustomCursor() {
         translateX: cursorXSpring,
         translateY: cursorYSpring,
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      // transition={{ type: 'tween', ease: 'backOut', duration: 0.3 }}
     ></motion.div>
   );
 }

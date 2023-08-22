@@ -50,8 +50,9 @@ export default function Sidebar() {
                 key={side.title}
                 className={clsx(
                   activeLink(pathname, side.link),
-                  'rotate-90 rounded px-1 text-sm',
-                  'md:text-base'
+                  'rotate-90 rounded px-1 text-base',
+                  'md:text-base',
+                  '2xl:text-lg'
                 )}
               >
                 <Link href={side.link}>{side.title}</Link>
