@@ -2,12 +2,27 @@
 
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 interface IPageWrapperProps {
   children: React.ReactNode;
 }
 
 export default function PageWrapper({ children }: IPageWrapperProps) {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      // eslint-disable-next-line no-unused-vars
+      const _locomotiveScroll = new LocomotiveScroll({
+        lenisOptions: {
+          lerp: 0.05,
+          smoothWheel: true,
+          smoothTouch: true,
+        },
+      });
+    })();
+  }, []);
+
   return (
     <motion.section
       className={clsx(
