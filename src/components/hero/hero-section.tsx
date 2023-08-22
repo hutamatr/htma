@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-import { Chubbs1SVG, Chubbs2SVG } from '@components/ui/svg/ChubbsSVG';
+import Chubbs1SVG from '@components/ui/svg/Chubbs1SVG';
+import Chubbs2SVG from '@components/ui/svg/Chubbs2SVG';
 import GithubSVG from '@components/ui/svg/GithubSVG';
 import TwitterSVG from '@components/ui/svg/TwitterSVG';
 
 import useBaffle from '@hooks/useBaffle';
+import { neutral } from '@utils/localFont';
 
 const socials = [
   {
@@ -47,9 +49,10 @@ export default function Hero() {
     >
       <div
         className={clsx(
-          'mb-20 mt-44 flex h-full flex-col-reverse justify-between',
+          'mb-24 mt-44 flex h-full flex-col-reverse justify-between',
           'md:mb-36 md:mt-52',
-          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-4'
+          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-4',
+          '2xl:gap-y-6'
         )}
       >
         <div className={clsx('w-full -rotate-90', 'lg:rotate-0')}>
@@ -82,9 +85,10 @@ export default function Hero() {
           >
             <motion.h1
               className={clsx(
-                'nameBaffle relative z-[1200] whitespace-nowrap text-lg font-bold text-custom-black',
-                'md:text-4xl',
-                'lg:whitespace-normal lg:text-6xl',
+                neutral.className,
+                'nameBaffle relative z-[1200] whitespace-nowrap text-base font-bold text-custom-black',
+                'md:text-2xl',
+                'lg:whitespace-normal lg:text-4xl',
                 'dark:text-custom-green'
               )}
               initial={{ opacity: 0, x: -24 }}
@@ -99,9 +103,10 @@ export default function Hero() {
             </motion.h1>
             <motion.h1
               className={clsx(
-                'nameBaffle relative z-[1200] whitespace-nowrap text-lg font-bold text-custom-black',
-                'md:text-4xl',
-                'lg:whitespace-normal lg:text-6xl',
+                neutral.className,
+                'nameBaffle relative z-[1200] whitespace-nowrap text-base font-bold text-custom-black',
+                'md:text-2xl',
+                'lg:whitespace-normal lg:text-4xl',
                 'dark:text-custom-green'
               )}
               initial={{ opacity: 0, x: -24 }}
@@ -112,7 +117,7 @@ export default function Hero() {
               }}
               exit={{ opacity: 0, x: -24 }}
             >
-              trirahmanto
+              trirahmaиto.
             </motion.h1>
           </div>
           <motion.h3
@@ -151,7 +156,8 @@ export default function Hero() {
             <Chubbs2SVG
               className={clsx(
                 'w-20 text-custom-black',
-                'dark:text-custom-green'
+                'dark:text-custom-green',
+                '2xl:w-24'
               )}
               fill='currentColor'
             />
@@ -168,7 +174,8 @@ export default function Hero() {
             <Chubbs1SVG
               className={clsx(
                 'w-20 text-custom-black',
-                'dark:text-custom-green'
+                'dark:text-custom-green',
+                '2xl:w-24'
               )}
               fill='currentColor'
             />
