@@ -31,7 +31,7 @@ export default function Navigation() {
     return (
       <header className='nav-height fixed top-0 z-[1090] flex w-full items-center'>
         <nav className='layout flex justify-center'>
-          <div className={clsx('grid-12 gap-2', 'md:gap-6')}>
+          <div className={clsx('grid-12 gap-1', 'md:gap-6')}>
             <div
               className={clsx(
                 'col-start-1 flex h-9 w-[4.5rem] animate-pulse items-center rounded bg-custom-black px-2 py-1',
@@ -58,7 +58,7 @@ export default function Navigation() {
   return (
     <header className='nav-height fixed top-0 z-[1090] flex w-full items-center'>
       <nav className='layout flex justify-center'>
-        <div className={clsx('grid-12 gap-2', 'md:gap-6')}>
+        <div className={clsx('grid-12 gap-1', 'md:gap-6')}>
           <div className='col-start-1 flex w-fit items-center rounded bg-custom-black px-2 py-1'>
             <Link
               href='/'
@@ -81,7 +81,8 @@ export default function Navigation() {
             >
               <MdGraphicEq
                 className={clsx(
-                  `text-3xl duration-500`,
+                  'text-3xl duration-500',
+                  'lg:text-4xl',
                   `${theme === 'dark' ? 'rotate-180' : 'rotate-45'}`
                 )}
               />

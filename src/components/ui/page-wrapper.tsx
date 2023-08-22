@@ -15,9 +15,8 @@ export default function PageWrapper({ children }: IPageWrapperProps) {
       // eslint-disable-next-line no-unused-vars
       const _locomotiveScroll = new LocomotiveScroll({
         lenisOptions: {
-          lerp: 0.05,
+          lerp: 0.06,
           smoothWheel: true,
-          smoothTouch: true,
         },
       });
     })();

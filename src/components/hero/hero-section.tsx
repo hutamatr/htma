@@ -49,16 +49,16 @@ export default function Hero() {
     >
       <div
         className={clsx(
-          'mb-24 mt-44 flex h-full flex-col-reverse justify-between',
-          'md:mb-36 md:mt-52',
-          'lg:mb-0 lg:mt-20 lg:flex-col lg:justify-center lg:gap-y-4',
+          'flex h-full flex-col-reverse justify-between pb-24 pt-44',
+          'md:pb-36 md:pt-52',
+          'lg:flex-col lg:justify-center lg:gap-y-4 lg:pb-0 lg:pt-20',
           '2xl:gap-y-6'
         )}
       >
         <div className={clsx('w-full -rotate-90', 'lg:rotate-0')}>
           <motion.h1
             className={clsx(
-              'text-xs font-normal text-custom-black',
+              'text-sm font-normal text-custom-black',
               'md:text-base',
               'lg:text-lg',
               'dark:text-custom-green'
