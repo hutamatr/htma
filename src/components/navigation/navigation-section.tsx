@@ -5,21 +5,19 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect } from 'react';
 import { MdGraphicEq } from 'react-icons/md';
-import { shallow } from 'zustand/shallow';
 
 import LoadingSpin from '@components/ui/loading-spin';
 
 import { useStore } from '@store/useStore';
 
+import { neutral } from '@utils/localFont';
+
 export default function Navigation() {
   const { theme, setTheme } = useTheme();
-  const { isClient, clientHandler } = useStore(
-    (state) => ({
-      isClient: state.isClient,
-      clientHandler: state.clientHandler,
-    }),
-    shallow
-  );
+  const { isClient, clientHandler } = useStore((state) => ({
+    isClient: state.isClient,
+    clientHandler: state.clientHandler,
+  }));
 
   useEffect(() => {
     clientHandler();
@@ -64,7 +62,10 @@ export default function Navigation() {
           <div className='col-start-1 flex w-fit items-center rounded bg-custom-black px-2 py-1'>
             <Link
               href='/'
-              className='whitespace-nowrap text-xl font-semibold text-custom-green'
+              className={clsx(
+                neutral.className,
+                'whitespace-nowrap text-lg font-semibold text-custom-green'
+              )}
             >
               HTMA
             </Link>

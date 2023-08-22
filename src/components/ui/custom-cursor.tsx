@@ -1,39 +1,26 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { motion, useSpring } from 'framer-motion';
+
+import useCursorPosition from '@hooks/useCursorPosition';
 
 export default function CustomCursor() {
-  const cursorRef = useRef<null | HTMLDivElement>(null);
+  const { cursorX, cursorY } = useCursorPosition();
 
-  useEffect(() => {
-    if (cursorRef.current == null || cursorRef == null) return;
+  const springConfig = { damping: 25, stiffness: 700 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
-    document.addEventListener('mousemove', (e) => {
-      if (cursorRef.current == null) return;
-      cursorRef.current.setAttribute(
-        'style',
-        'top: ' + e.pageY + 'px; left: ' + e.pageX + 'px;'
-      );
-    });
-
-    let timer: unknown = null;
-    document.addEventListener('click', () => {
-      if (cursorRef.current == null) return;
-      cursorRef.current.classList.add('expand');
-
-      timer = setTimeout(() => {
-        if (cursorRef.current == null) return;
-        cursorRef.current.classList.remove('expand');
-      }, 500);
-    });
-
-    return () => {
-      document.removeEventListener('mousemove', () => {});
-      document.removeEventListener('click', () => {
-        clearTimeout(timer as number);
-      });
-    };
-  }, []);
-
-  return <div className='cursor' ref={cursorRef}></div>;
+  return (
+    <motion.div
+      className='cursor'
+      style={{
+        translateX: cursorXSpring,
+        translateY: cursorYSpring,
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      // transition={{ type: 'tween', ease: 'backOut', duration: 0.3 }}
+    ></motion.div>
+  );
 }

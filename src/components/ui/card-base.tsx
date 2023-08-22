@@ -5,7 +5,9 @@ interface CardProps {
 
 export default function Card({ children, className }: CardProps) {
   return (
-    <div className={`flex flex-col rounded bg-transparent ${className}`}>
+    <div
+      className={`flex w-full cursor-pointer flex-col rounded bg-transparent ${className}`}
+    >
       {children}
     </div>
   );

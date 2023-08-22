@@ -29,8 +29,6 @@
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],
       "@modules/*": ["src/modules/*"]
-      // "@navigation/*": ["src/navigation/*"],
-      // "types/*": ["src/types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

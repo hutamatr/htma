@@ -4,6 +4,7 @@ import Hero from '@components/hero/hero-section';
 import Navigation from '@components/navigation/navigation-section';
 import Sidebar from '@components/sidebar/sidebar-section';
 import CustomCursor from '@components/ui/custom-cursor';
+import Modal from '@components/ui/modal/modal';
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -26,6 +27,7 @@ export default function Layout({ children }: ILayoutProps) {
             <Hero />
             {children}
             <Sidebar />
+            <Modal />
           </div>
         </section>
       </main>

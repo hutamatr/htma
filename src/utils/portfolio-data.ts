@@ -5,41 +5,47 @@ import taskify from '@public/assets/images/portfolio/taskify-mockup.webp';
 import urban from '@public/assets/images/portfolio/urban-shop-mockup.webp';
 import shortfly from '@public/assets/images/portfolio/url-shortly-mockup.webp';
 
-export const portfolioData = [
+export const portfolioData: IPortfolio[] = [
   {
     id: '01',
     title: 'Garuda Universe',
-    image: garuda,
+    image: garuda.src,
     url: 'https://garudaverse.io/',
+    repo: undefined,
   },
   {
     id: '02',
     title: 'Ibrahim Law',
-    image: ibrahim,
+    image: ibrahim.src,
     url: 'https://ibrahim-law.id/',
+    repo: undefined,
   },
   {
     id: '03',
     title: 'Urban Fashion Shop',
-    image: urban,
+    image: urban.src,
     url: 'https://urban-fashion.htma.site/',
+    repo: 'https://github.com/hutamatr/urban-fashion-shop',
   },
   {
     id: '04',
     title: 'Taskify',
-    image: taskify,
-    url: 'https://github.com/hutamatr/taskify',
+    image: taskify.src,
+    url: 'https://github.com/hutamatr/taskify/releases/tag/1.1.0',
+    repo: 'https://github.com/hutamatr/taskify',
   },
   {
     id: '05',
     title: 'Crypto Price Watcher',
-    image: coinWatch,
+    image: coinWatch.src,
     url: 'https://cryptoprices-watcher.vercel.app/',
+    repo: 'https://github.com/hutamatr/cryptoprices-watcher',
   },
   {
     id: '06',
     title: 'Url Shortfly',
-    image: shortfly,
+    image: shortfly.src,
     url: 'https://url-shortfly.vercel.app/',
+    repo: 'https://github.com/hutamatr/url-shortfly',
   },
 ];
