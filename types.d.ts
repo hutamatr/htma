@@ -10,6 +10,7 @@ interface Inputs {
 interface IPortfolio {
   id: string;
   title: string;
-  image: StaticImageData;
+  image: string;
   url: string;
+  repo?: string;
 }
