@@ -1,35 +1,11 @@
 import clsx from 'clsx';
-import localFont from 'next/font/local';
 
 import Layout from '@components/layout/layout-wrapper';
 import { ThemeProvider } from '@components/provider/theme-provider';
 
-import '@styles/globals.css';
+import { kataGrotesk } from '@utils/localFont';
 
-const kataGrotesk = localFont({
-  src: [
-    {
-      path: '../../public/fonts/KataGrotesk-Thin.ttf',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/KataGrotesk-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/KataGrotesk-SemiBold.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/KataGrotesk-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-});
+import '@styles/globals.css';
 
 interface IRootLayoutProps {
   children: React.ReactNode;
@@ -45,6 +21,9 @@ export default function RootLayout({ children }: IRootLayoutProps) {
           'dark:bg-custom-black'
         )}
       >
+        <div id='modal-card'></div>
+        <div id='modal-backdrop'></div>
+        <div id='modal-close'></div>
         <ThemeProvider
           attribute='class'
           storageKey='htma-theme'

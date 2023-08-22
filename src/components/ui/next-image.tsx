@@ -1,15 +1,12 @@
-'use client';
-
 import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
-import { useState } from 'react';
 
 type NextImageProps = {
   useSkeleton?: boolean;
   imgClassName?: string;
   blurClassName?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ref?: React.Ref<HTMLImageElement | null> | any;
+  ref?: React.Ref<HTMLImageElement | null>;
   alt: string;
 } & (
   | { width: string | number; height: string | number }
@@ -18,7 +15,6 @@ type NextImageProps = {
   ImageProps;
 
 const NextImage = ({
-  useSkeleton = false,
   src,
   width,
   height,
@@ -26,10 +22,8 @@ const NextImage = ({
   ref,
   className,
   imgClassName,
-  blurClassName,
   ...rest
 }: NextImageProps) => {
-  const [status, setStatus] = useState(useSkeleton ? 'loading' : 'complete');
   const widthIsSet = className?.includes('w-') ?? false;
 
   return (
@@ -38,15 +32,11 @@ const NextImage = ({
       className={className}
     >
       <Image
-        className={clsx(
-          imgClassName,
-          status === 'loading' && clsx('animate-pulse', blurClassName)
-        )}
+        className={clsx(imgClassName)}
         src={src}
         width={width}
         height={height}
         alt={alt}
-        onLoadingComplete={() => setStatus('complete')}
         ref={ref}
         {...rest}
       />

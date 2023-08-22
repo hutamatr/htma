@@ -4,6 +4,7 @@ import { MdArrowForward } from 'react-icons/md';
 
 import NextImage from '@components/ui/next-image';
 
+import { neutral } from '@utils/localFont';
 import { langSkillsImage, libFrameSkillsImage } from '@utils/skills-image';
 
 export default function Skills() {
@@ -28,13 +29,14 @@ export default function Skills() {
         />
         <h1
           className={clsx(
-            'text-3xl text-custom-black',
+            neutral.className,
+            'text-xl text-custom-black',
             'group-hover:text-custom-green',
-            'lg:text-4xl',
+            'lg:text-2xl',
             'dark:text-custom-green'
           )}
         >
-          skills
+          tech toolbox
         </h1>
       </div>
       <div className='flex flex-col gap-y-4'>

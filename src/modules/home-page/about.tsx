@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import { MdArrowForward } from 'react-icons/md';
 
+import { neutral } from '@utils/localFont';
+
 export default function About() {
   return (
     <section
@@ -23,9 +25,10 @@ export default function About() {
         />
         <h1
           className={clsx(
-            'text-3xl text-custom-black',
+            neutral.className,
+            'text-xl font-normal text-custom-black',
             'group-hover:text-custom-green',
-            'lg:text-4xl',
+            'lg:text-2xl',
             'dark:text-custom-green'
           )}
         >

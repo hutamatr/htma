@@ -6,3 +6,11 @@ interface Inputs {
   subject: string;
   message: string;
 }
+
+interface IPortfolio {
+  id: string;
+  title: string;
+  image: string;
+  url: string;
+  repo?: string;
+}

@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { useEffect } from 'react';
 
-export default function Error({
+export default function ErrorPage({
   error,
   reset,
 }: {
@@ -18,13 +18,7 @@ export default function Error({
 
   return (
     <div className='col-start-5 col-end-10 flex h-screen w-full flex-col items-center justify-center gap-y-6 lg:col-start-7'>
-      <h2
-        className={clsx(
-          'text-center text-lg text-red-500',
-          'md:text-2xl'
-          // 'dark:text-custom-green'
-        )}
-      >
+      <h2 className={clsx('text-center text-lg text-red-500', 'md:text-2xl')}>
         Something went wrong!
       </h2>
       <button
