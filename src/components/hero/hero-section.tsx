@@ -59,9 +59,10 @@ export default function Hero() {
           <motion.h1
             className={clsx(
               'text-sm font-normal text-custom-black',
+              'dark:text-custom-green',
               'md:text-base',
               'lg:text-lg',
-              'dark:text-custom-green'
+              '2xl:text-xl'
             )}
             initial={{ opacity: 0, x: -24 }}
             animate={{
@@ -87,9 +88,10 @@ export default function Hero() {
               className={clsx(
                 neutral.className,
                 'nameBaffle relative z-[1200] whitespace-nowrap text-base font-bold text-custom-black',
+                'dark:text-custom-green',
                 'md:text-2xl',
                 'lg:whitespace-normal lg:text-4xl',
-                'dark:text-custom-green'
+                '2xl:text-5xl'
               )}
               initial={{ opacity: 0, x: -24 }}
               animate={{
@@ -105,9 +107,10 @@ export default function Hero() {
               className={clsx(
                 neutral.className,
                 'nameBaffle relative z-[1200] whitespace-nowrap text-base font-bold text-custom-black',
+                'dark:text-custom-green',
                 'md:text-2xl',
                 'lg:whitespace-normal lg:text-4xl',
-                'dark:text-custom-green'
+                '2xl:text-5xl'
               )}
               initial={{ opacity: 0, x: -24 }}
               animate={{
@@ -123,9 +126,10 @@ export default function Hero() {
           <motion.h3
             className={clsx(
               'w-fit whitespace-nowrap rounded bg-custom-black px-1 text-base font-light text-custom-green',
+              'dark:text-custom-white-2',
               'md:text-lg',
               'lg:whitespace-normal lg:bg-transparent lg:text-2xl lg:font-thin lg:text-custom-black',
-              'dark:text-custom-white-2'
+              '2xl:text-3xl'
             )}
             initial={{ opacity: 0, x: -24 }}
             animate={{
