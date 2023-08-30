@@ -104,7 +104,7 @@ export default function ModalCard({
             height={600}
             className={clsx('h-full w-full', '')}
             imgClassName={clsx(
-              'h-[27rem] w-full rounded-xl object-cover object-center object-top',
+              'h-[27rem] w-full rounded-xl object-cover object-center',
               'md:w-full'
             )}
           />

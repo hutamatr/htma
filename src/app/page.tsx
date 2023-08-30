@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import Footer from '@components/footer/footer-section';
+import Footer from '@components/footer/footer';
 import PageWrapper from '@components/ui/page-wrapper';
 
 import About from '@modules/home-page/about';
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <PageWrapper>
-      <div className='mb-8 flex flex-wrap pt-[clamp(5.875rem,_0.0294rem_+_7.7941vw,_12.5rem)]'>
+      <div className='mb-8 pt-[clamp(5.875rem,_0.0294rem_+_7.7941vw,_12.5rem)]'>
         <div className='w-full'>
           <About />
           <Skills />

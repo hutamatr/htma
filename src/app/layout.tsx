@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 
 import Layout from '@components/layout/layout-wrapper';
-import { ThemeProvider } from '@components/provider/theme-provider';
 
 import { kataGrotesk } from '@utils/localFont';
+import { ThemeProvider } from '@utils/theme-provider';
 
 import '@styles/globals.css';
 
