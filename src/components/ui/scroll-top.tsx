@@ -14,12 +14,15 @@ const ScrollTop = () => {
   };
 
   useEffect(() => {
-    clientHandler();
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    clientHandler();
   }, [clientHandler]);
 
   const scrollTopHandler = () => {
