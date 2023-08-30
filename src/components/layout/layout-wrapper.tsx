@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 
-import Hero from '@components/hero/hero-section';
-import Navigation from '@components/navigation/navigation-section';
-import Sidebar from '@components/sidebar/sidebar-section';
+import Hero from '@components/hero/hero';
+import Navigation from '@components/navigation/navigation';
+import Sidebar from '@components/sidebar/sidebar';
 import CustomCursor from '@components/ui/custom-cursor';
 import Modal from '@components/ui/modal/modal';
 
