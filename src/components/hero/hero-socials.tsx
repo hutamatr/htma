@@ -3,22 +3,22 @@ import Link from 'next/link';
 
 import LoadingSkeleton from '@components/ui/loading-skeleton';
 import GithubSVG from '@components/ui/svg/GithubSVG';
-import TwitterSVG from '@components/ui/svg/TwitterSVG';
+import XSVG from '@components/ui/svg/XSVG';
 
 import { useStore } from '@store/useStore';
 
 const socials = [
   {
     id: '01',
-    title: 'Github',
+    title: 'hutamatr',
     href: 'https://github.com/hutamatr',
     image: GithubSVG,
   },
   {
     id: '02',
-    title: 'Twitter',
+    title: '@huutamatr',
     href: 'https://twitter.com/huutamatr',
-    image: TwitterSVG,
+    image: XSVG,
   },
 ];
 

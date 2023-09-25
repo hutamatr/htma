@@ -8,9 +8,9 @@ body {
   overscroll-behavior: none;
 }
 
-* {
+/* * {
   cursor: none !important;
-}
+} */
 
 @layer base {
   .layout {
@@ -114,7 +114,7 @@ body {
   /* Custom Cursor */
 
   .cursor {
-    @apply pointer-events-none fixed left-0 top-0 z-[1350] h-7 w-7 rounded-full bg-custom-white-2 mix-blend-difference dark:bg-custom-green;
+    @apply pointer-events-none fixed left-1 top-1 z-[1350] h-6 w-6 rounded-full bg-custom-white-2 mix-blend-difference dark:bg-custom-green;
   }
   @media screen and (max-width: 768px) {
     .cursor {
