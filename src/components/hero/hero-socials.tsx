@@ -27,7 +27,7 @@ export default function HeroSocials() {
   return (
     <ul
       className={clsx(
-        'flex w-full -rotate-90 items-center justify-evenly',
+        'flex w-full -rotate-90 items-center justify-evenly gap-x-4',
         'md:gap-x-1',
         'lg:rotate-0 lg:py-8'
       )}

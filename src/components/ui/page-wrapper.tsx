@@ -15,7 +15,7 @@ export default function PageWrapper({ children }: IPageWrapperProps) {
       // eslint-disable-next-line no-unused-vars
       const _locomotiveScroll = new LocomotiveScroll({
         lenisOptions: {
-          lerp: 0.07,
+          lerp: 0.06,
           smoothWheel: true,
         },
       });
@@ -30,8 +30,8 @@ export default function PageWrapper({ children }: IPageWrapperProps) {
         'lg:col-start-5'
       )}
       initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
-      exit={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
+      exit={{ opacity: 0, y: 0 }}
     >
       {children}
     </motion.section>
