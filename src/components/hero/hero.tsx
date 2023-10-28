@@ -39,7 +39,7 @@ export default function Hero() {
     >
       <div
         className={clsx(
-          'flex h-full flex-col-reverse justify-between pb-24 pt-44',
+          'flex h-full flex-col-reverse justify-between pb-24 pt-52',
           'md:pb-36 md:pt-52',
           'lg:flex-col lg:justify-center lg:gap-y-4 lg:pb-0 lg:pt-20',
           '2xl:gap-y-6'

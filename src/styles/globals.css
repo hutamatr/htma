@@ -24,7 +24,7 @@ body {
 
 @layer components {
   .nav-height {
-    height: clamp(5.875rem, 0.0294rem + 7.7941vw, 12.5rem);
+    height: clamp(5.875rem, 0.0294rem + 7.7941vw, 7rem);
   }
 }
 
