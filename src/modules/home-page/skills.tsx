@@ -36,7 +36,7 @@ export default function Skills() {
             'dark:text-custom-green'
           )}
         >
-          tech toolbox
+          tech stack I'm good at
         </h1>
       </div>
       <div className='flex flex-col gap-y-4'>
