@@ -2,6 +2,7 @@ import coinWatch from '@public/assets/images/portfolio/coin-watch-mockup.webp';
 import garuda from '@public/assets/images/portfolio/garuda-mockup.webp';
 import ibrahim from '@public/assets/images/portfolio/ibrahim-law-mockup.webp';
 import taskify from '@public/assets/images/portfolio/taskify-mockup.webp';
+import todoApp from '@public/assets/images/portfolio/todo-app-mockup.webp';
 import urban from '@public/assets/images/portfolio/urban-shop-mockup.webp';
 import shortfly from '@public/assets/images/portfolio/url-shortly-mockup.webp';
 
@@ -17,7 +18,7 @@ export const portfolioData: IPortfolio[] = [
     id: '02',
     title: 'Ibrahim Law',
     image: ibrahim.src,
-    url: 'https://ibrahim-law.id/',
+    url: 'https://ibrahim-law.vercel.app/',
     repo: undefined,
   },
   {
@@ -47,5 +48,12 @@ export const portfolioData: IPortfolio[] = [
     image: shortfly.src,
     url: 'https://url-shortfly.vercel.app/',
     repo: 'https://github.com/hutamatr/url-shortfly',
+  },
+  {
+    id: '07',
+    title: 'Todolist App',
+    image: todoApp.src,
+    url: 'https://todolist-app-project.vercel.app/',
+    repo: 'https://github.com/hutamatr/todolist-app',
   },
 ];

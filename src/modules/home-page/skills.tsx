@@ -36,7 +36,7 @@ export default function Skills() {
             'dark:text-custom-green'
           )}
         >
-          tech stack I'm good at
+          skills
         </h1>
       </div>
       <div className='flex flex-col gap-y-4'>
@@ -69,7 +69,7 @@ export default function Skills() {
                     index === 1 ? 'bg-custom-white-2 p-1' : '',
                     'flex w-10 items-center justify-center rounded-sm',
                     'md:w-14',
-                    '2xl:w-16'
+                    '2xl:w-[4.5rem]'
                   )}
                 />
               </Link>
@@ -112,7 +112,7 @@ export default function Skills() {
                       : '',
                     'flex w-10 items-center justify-center rounded-sm',
                     'md:w-14',
-                    '2xl:w-16'
+                    '2xl:w-[4.5rem]'
                   )}
                 />
               </Link>

@@ -1,6 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
+import Link from 'next/link';
 import { MdArrowForward } from 'react-icons/md';
 
 import Card from '@components/ui/card-base';
@@ -49,10 +50,10 @@ export default function Portfolio() {
               'dark:text-custom-green'
             )}
           >
-            portfolio
+            my portfolio
           </h1>
         </div>
-        <ul className='mx-4 grid grid-cols-1 gap-[0.65rem] md:grid-cols-12 md:grid-rows-[7]'>
+        <ul className='mx-4 grid grid-cols-1 gap-[0.65rem] md:grid-cols-12 md:grid-rows-[10]'>
           {portfolioData.map((portfolio, index) => {
             return (
               <li
@@ -69,7 +70,9 @@ export default function Portfolio() {
                   index === 1 &&
                     'md:col-start-5 md:col-end-13 md:row-start-5 md:row-end-7',
                   index === 5 &&
-                    'md:col-start-1 md:col-end-5 md:row-start-6 md:row-end-7'
+                    'md:col-start-1 md:col-end-5 md:row-start-6 md:row-end-7',
+                  index === 6 &&
+                    'md:row-end-8 md:col-start-9 md:col-end-13 md:row-start-7'
                 )}
               >
                 <button onClick={portfolioHandler.bind(null, portfolio)}>
@@ -109,6 +112,26 @@ export default function Portfolio() {
             );
           })}
         </ul>
+        <p
+          className={clsx(
+            'flex flex-col items-center justify-center gap-x-1 text-center opacity-70',
+            'md:flex-row'
+          )}
+        >
+          For other portfolio, you can visit my GitHub at{' '}
+          <Link
+            href='https://github.com/hutamatr'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={clsx(
+              'text-blue-700 underline',
+              'dark:text-custom-green'
+            )}
+          >
+            {' '}
+            github.com/hutamatr.
+          </Link>
+        </p>
       </section>
     </>
   );
