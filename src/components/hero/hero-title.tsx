@@ -116,7 +116,7 @@ export default function HeroTitle() {
           }}
           exit={{ opacity: 0, x: -24 }}
         >
-          --frontend developer
+          --web developer
         </motion.h3>
       ) : (
         <LoadingSkeleton className={clsx('h-4 w-40', 'lg:h-8 lg:w-56')} />

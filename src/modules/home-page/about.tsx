@@ -46,16 +46,15 @@ export default function About() {
           <span className='rounded bg-custom-black px-1 py-px text-custom-green'>
             Hutama
           </span>
-          , a frontend developer who creates beautiful and functional websites.
-          With a focus on simplicity and user experience, I specialize in
+          , a web developer who creates beautiful and functional websites. With
+          a focus on simplicity and user experience, I specialize in
           transforming ideas into visually appealing and easy-to-use digital
           interfaces.
         </p>
         <p className={clsx('text-sm', 'md:text-base')}>
-          Continual growth and learning are important to me as a frontend
-          developer. I stay up to date with the latest industry trends and
-          tools, embracing new technologies to deliver modern and
-          forward-thinking solutions.
+          Continual growth and learning are important to me as a web developer.
+          I stay up to date with the latest industry trends and tools, embracing
+          new technologies to deliver modern and forward-thinking solutions.
         </p>
       </article>
     </section>
