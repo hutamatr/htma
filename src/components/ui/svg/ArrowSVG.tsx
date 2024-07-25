@@ -1,5 +1,7 @@
 import { SVGProps } from 'react';
-export default function ArrowSVG({ ...props }: SVGProps<SVGSVGElement>) {
+export default function ArrowSVG({
+  ...props
+}: Readonly<SVGProps<SVGSVGElement>>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

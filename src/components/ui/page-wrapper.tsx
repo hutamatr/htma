@@ -8,7 +8,7 @@ interface IPageWrapperProps {
   children: React.ReactNode;
 }
 
-export default function PageWrapper({ children }: IPageWrapperProps) {
+export default function PageWrapper({ children }: Readonly<IPageWrapperProps>) {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;

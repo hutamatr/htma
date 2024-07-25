@@ -4,6 +4,8 @@ interface ILoadingSpinProps {
   className?: string;
 }
 
-export default function LoadingSpin({ className }: ILoadingSpinProps) {
+export default function LoadingSpin({
+  className,
+}: Readonly<ILoadingSpinProps>) {
   return <div className={clsx(className, 'loader')}></div>;
 }

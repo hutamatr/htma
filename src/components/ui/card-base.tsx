@@ -3,7 +3,7 @@ interface CardProps {
   className?: string;
 }
 
-export default function Card({ children, className }: CardProps) {
+export default function Card({ children, className }: Readonly<CardProps>) {
   return (
     <div
       className={`flex w-full cursor-pointer flex-col rounded bg-transparent ${className}`}

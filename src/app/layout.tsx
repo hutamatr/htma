@@ -11,7 +11,7 @@ interface IRootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: IRootLayoutProps) {
+export default function RootLayout({ children }: Readonly<IRootLayoutProps>) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body
