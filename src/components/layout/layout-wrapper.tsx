@@ -10,7 +10,7 @@ interface ILayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: ILayoutProps) {
+export default function Layout({ children }: Readonly<ILayoutProps>) {
   return (
     <>
       <div

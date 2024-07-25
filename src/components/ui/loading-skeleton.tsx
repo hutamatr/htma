@@ -4,7 +4,9 @@ interface ILoadingSkeletonProps {
   className?: string;
 }
 
-export default function LoadingSkeleton({ className }: ILoadingSkeletonProps) {
+export default function LoadingSkeleton({
+  className,
+}: Readonly<ILoadingSkeletonProps>) {
   return (
     <div
       className={clsx(

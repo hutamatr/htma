@@ -1,6 +1,8 @@
 import { SVGProps } from 'react';
 
-export default function LampSVG({ ...props }: SVGProps<SVGSVGElement>) {
+export default function LampSVG({
+  ...props
+}: Readonly<SVGProps<SVGSVGElement>>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

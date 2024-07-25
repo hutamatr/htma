@@ -17,7 +17,7 @@ export interface IModalCardProps {
 export default function ModalCard({
   innerClassName,
   outerClassName,
-}: IModalCardProps) {
+}: Readonly<IModalCardProps>) {
   const { isModalShow, portfolioData } = useStore((state) => state);
 
   return (

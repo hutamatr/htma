@@ -1,5 +1,7 @@
 import { SVGProps } from 'react';
-export default function CloseSVG({ ...props }: SVGProps<SVGSVGElement>) {
+export default function CloseSVG({
+  ...props
+}: Readonly<SVGProps<SVGSVGElement>>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

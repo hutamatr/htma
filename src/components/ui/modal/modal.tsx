@@ -15,7 +15,7 @@ export default function Modal({
   innerClassName,
   outerClassName,
   ...props
-}: IModalProps) {
+}: Readonly<IModalProps>) {
   const { isClient, clientHandler } = useStore((state) => ({
     isClient: state.isClient,
     clientHandler: state.clientHandler,
