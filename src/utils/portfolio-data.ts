@@ -11,7 +11,7 @@ export const portfolioData: IPortfolio[] = [
     id: '01',
     title: 'Garuda Universe',
     image: garuda.src,
-    url: 'https://garudaverse.io/',
+    url: 'https://garudaverse.tech/',
     repo: undefined,
   },
   {
