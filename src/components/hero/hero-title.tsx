@@ -72,7 +72,7 @@ export default function HeroTitle() {
             >
               hutama
             </motion.h1>
-            <motion.h1
+            {/* <motion.h1
               className={clsx(
                 neutral.className,
                 'nameBaffle relative z-[1200] whitespace-nowrap text-base font-bold text-custom-black',
@@ -89,8 +89,7 @@ export default function HeroTitle() {
               }}
               exit={{ opacity: 0, x: -24 }}
             >
-              trirahmaиto.
-            </motion.h1>
+            </motion.h1> */}
           </>
         ) : (
           <>
