@@ -25,7 +25,7 @@ export const portfolioData: IPortfolio[] = [
     id: '03',
     title: 'Urban Fashion Shop',
     image: urban.src,
-    url: 'https://urban-fashion.htma.site/',
+    url: 'https://urban-fashion.htma.my.id/',
     repo: 'https://github.com/hutamatr/urban-fashion-shop',
   },
   {
