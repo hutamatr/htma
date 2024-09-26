@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import clsx from 'clsx';
 
 import Layout from '@components/layout/layout-wrapper';
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: Readonly<IRootLayoutProps>) {
         >
           <Layout>{children}</Layout>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

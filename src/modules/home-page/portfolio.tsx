@@ -71,7 +71,7 @@ export default function Portfolio() {
                 index === 5 &&
                   'md:col-start-1 md:col-end-5 md:row-start-6 md:row-end-7',
                 index === 6 &&
-                  'md:row-end-8 md:col-start-9 md:col-end-13 md:row-start-7'
+                  'md:col-start-9 md:col-end-13 md:row-start-7 md:row-end-8'
               )}
             >
               <button onClick={portfolioHandler.bind(null, portfolio)}>
