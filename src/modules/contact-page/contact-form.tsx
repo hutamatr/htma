@@ -56,6 +56,8 @@ export default function ContactForm() {
     } catch (error) {
       setStatus('reject');
       toast.error('Something went wrong', { duration: 3000 });
+      // eslint-disable-next-line no-console
+      console.error(error);
     } finally {
       setTimeout(() => setStatus('idle'), 6000);
     }
