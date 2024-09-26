@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { MdDoubleArrow } from 'react-icons/md';
@@ -26,7 +28,9 @@ const ScrollTop = () => {
   }, [clientHandler]);
 
   const scrollTopHandler = () => {
-    isClient && window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (isClient) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
